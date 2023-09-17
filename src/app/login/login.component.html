@@ -1,0 +1,28 @@
+
+<div class="body">
+<div class="flexContainer">
+    <h3 class="top-heading">Login</h3>
+<form [formGroup]="loginForm">
+    
+    <div class="element-container">
+        <i class="bi bi-envelope-fill"></i>
+        <input type="text" placeholder="Email Id" name="email" formControlName="email">
+        <br>
+        <div class="error" *ngIf="email && email.invalid && email.touched">Required</div>
+    </div>
+    <div class="element-container">
+        <i class="bi bi-lock-fill"></i>
+        <input type="password" placeholder="Password" name="password" formControlName="password">
+        <br>
+        <div class="error" *ngIf="password && password.invalid && password.touched"> Required</div>
+    </div>
+    <div class="div-btn">
+        <button class="btn btn-primary" (click)="loginData(loginForm.value)" [disabled]= "loginForm.invalid">Login</button>
+    </div>
+    <span>Not have an account?</span><a routerLink="/register"  >Register</a>
+
+</form>
+<div class="serverMessage">{{message}}</div>
+</div>
+</div>
+

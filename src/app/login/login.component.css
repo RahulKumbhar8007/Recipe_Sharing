@@ -1,0 +1,82 @@
+
+
+.body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-image: url("/assets/1.jpg");
+     background-size: cover;
+}
+.flexContainer{
+   
+    
+     padding: 20px 70px;
+     box-shadow: 0px 2px 10px gray;
+     border-radius: 10px;
+     background-color: rgb(162, 240, 240);
+
+}
+.flexContainer:hover{
+    scale: 1rem;
+    box-shadow: 0px 0px 4px rgb(226, 22, 73), 0px 0px 8px rgb(202, 24, 24), 0px 0px 12px rgb(18, 31, 214);
+  }
+
+
+h3{
+    text-align: center;
+    margin: 20px 0px;
+}
+input{
+    margin-top: 20px;
+    padding: 5px 10px ;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+ 
+}
+
+
+   
+.div-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin:30px 0px 0px 0px;
+    width: 200px;
+   
+  
+}
+.bi{
+    font-size: 16px;
+    
+
+}
+span{
+    font-size: 12px;
+    margin-left: 35px
+}
+a{
+    font-size: 13px;
+}
+.error{
+    color:red;
+}
+.error{
+    color:red;
+    text-align: center;
+    font-size: small;
+}
+@media screen and (max-width:400px){
+    .flexContainer{
+   padding: 15px 20px;
+        
+   }
+}
+.serverMessage{
+    color: red;
+    text-align: center;
+}

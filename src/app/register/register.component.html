@@ -1,0 +1,31 @@
+<div class="body">
+    <div class="flexContainer">
+    <h3 class="top-heading">Sign Up</h3>
+    
+        <form [formGroup]="userForm">
+            <div class="element-container">
+                <i class="bi bi-person-fill"></i>
+                <input type="text" placeholder="Name" name="name" formControlName="name">
+            </div>
+             <div class="element-container">
+                <i class="bi bi-envelope-fill"></i>
+                <input type="email" placeholder="Email Id" name="email" formControlName="email">
+                <br>
+                <div class="error" *ngIf="email && email.invalid && email.touched"> Required</div>
+            </div>
+            <div class="element-container">
+                <i class="bi bi-lock-fill"></i>
+                <input type="password" placeholder="Password" name="password" formControlName="password">
+                <br>
+                <div class="error" *ngIf="password && password.invalid && password.touched"> Required</div>
+            </div>
+            <div class="div-btn">
+                <button class="btn btn-primary" (click)="Data(userForm.value)"
+                    [disabled]="userForm.invalid">Register</button><br>
+            </div>
+            <span>Already have an account?</span><a routerLink="/login"  >Login</a>
+
+        </form>
+        <div class="serverMessage">{{toMessage}}</div>
+    </div>
+

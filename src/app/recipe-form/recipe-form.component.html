@@ -1,0 +1,64 @@
+<div class="form">
+  <form>
+    <h3>Add Recipes</h3>
+    <div class="input">
+      <h5>Recipe Name:</h5>
+      <input type="text" id="name" [(ngModel)]="recipe.recipeName" name="recipeName" placeholder="Recipe name">
+    </div>
+    <div class="input">
+      <h5>Ingredients:</h5>
+      <input [(ngModel)]="newIngredients" placeholder="Add one by one" name="ingrdients" />
+      <button class="btn-icon" (click)="addTask()"><i class="bi bi-plus-lg"></i></button>
+
+      <ul>
+        <li *ngFor="let task of storedIngredients; let i = index">
+          {{ task }}
+          <button class="btn-icon" id="int-delete-icon" (click)="removeTask(i)"><i class="bi bi-x-lg"></i></button>
+        </li>
+      </ul>
+
+    </div>
+
+
+    <div class="input">
+      <h5>Method:</h5>
+      <input [(ngModel)]="newMethodStep" placeholder="Add in Multiple steps (Ex. step 1: example...) " name="method" />
+      <button class="btn-icon" (click)="addStep()"><i class="bi bi-plus-lg"></i></button>
+
+      <div *ngFor="let task of storedMethodStep; let i=index">
+        <span>Step {{ i + 1 }} :</span> {{ task }}
+        <button class="btn-icon" id="step-delete-icon" (click)="removeStep(i)"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+    </div>
+    <div class="input">
+
+      <h5>Total Cook Time:</h5>
+      <input type="text" id="time" [(ngModel)]="recipe.totalCookTime" name="totalCookTime"
+        placeholder=" Total Cook Time">
+    </div>
+    <div class="input">
+
+      <h5>Image:</h5>
+      <input type="file" id="image" (change)="onFileSelected($event)" name="image">
+    </div>
+
+    <div class="input">
+      <h5>Email Id:</h5>
+      <input type="email" id="name" [(ngModel)]="recipe.email" name="email" placeholder="Email Id">
+    </div>
+
+    <div class="input">
+      <h5>Name:</h5>
+      <input type="text" id="name" [(ngModel)]="recipe.yourName" name="yourName" placeholder="your name">
+    </div>
+
+
+
+    <div id="submit-btn">
+      <button class="btn btn-primary" type="submit" (click)="onSubmit()">Add Recipe</button>
+    </div>
+
+
+  </form>
+</div>

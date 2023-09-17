@@ -1,0 +1,43 @@
+.body{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.recipeDetailContainer{
+    
+    width: 95%;
+    padding: 2rem 2rem 0 2rem;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    box-shadow: 3px 5px 12px gray; 
+    border-radius: 10px;
+}
+#img-div{
+    display: flex;
+    justify-content: center;
+  
+}
+img{
+    box-shadow: 3px 5px 12px gray; 
+}
+h2{
+text-align: center;
+margin: 3% 0;
+}
+
+   .owner_name{
+    display: flex;
+    justify-content: end;
+   }
+   p{
+    font-size: 13px;
+   }
+   li::marker{
+    color:rgb(255, 0, 0);
+   }
+   #method_step{
+    font-weight: 500;
+    color: black;
+   }

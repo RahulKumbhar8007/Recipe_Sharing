@@ -1,0 +1,25 @@
+<div class="body">
+    <div class="recipeDetailContainer" *ngIf="recipe">
+        <div id="img-div">
+        <img [src]="'http://localhost:5000/' + recipe.imagePath" alt="{{ recipe.RecipeName}}" width="200px" height="200px">
+       </div>
+        <h2>{{ recipe.RecipeName }}</h2>
+        
+        <div> 
+          <h3>Ingredients</h3>
+          <ul>
+            <li *ngFor="let ing_list of recipe.ingredients" type="circle">{{ing_list}}</li>
+          </ul>
+        </div>
+
+        <div> 
+          <h3>Method</h3>
+          <div *ngFor="let methodSteps of recipe.method; let i = index">
+            <div><span id="method_step"> Step {{ i + 1 }} :</span> {{methodSteps }}</div>
+            <br>
+          </div>
+        </div>
+        <h5>Total Cook Time</h5><span>{{ recipe.totalCookTime}}</span>
+        <div class="owner_name"><p>{{recipe.yourName}}</p></div>
+    </div>
+</div>

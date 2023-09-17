@@ -1,0 +1,25 @@
+<div class="body">
+
+<div class="big-container">
+    <h2>Contact Us</h2>
+    <div class="subContainer">
+
+        <div>
+            <input type="text" name="name" placeholder="Name" class="input" value="{{user.yourName}}">
+        </div>
+        <div>
+            <input type="email" name="name" placeholder="Email Id" class="input" value="{{user.Email}}">
+
+        </div>
+        
+    </div>
+
+    <div class="messageBox">
+        <textarea rows="7" cols="50" name="message" placeholder="Message" [(ngModel)]="message"></textarea>
+    </div>
+
+    <div class="btn-div">
+        <button  class="btn btn-primary" (click)="sendMessage()">Send Message</button>
+    </div>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="body">
+<div class="recipe-content">
+  
+<h2>Recipes</h2>
+<div class="images-list">
+  <div class="recipe-image" *ngFor="let recipe of recipes">
+    
+    <img [src]="'http://localhost:5000/' + recipe.imagePath" alt="{{ recipe.Recipe_name }}" width="170px" height="170px" >
+    <div class="recipeName"><a [routerLink]="['/recipe', recipe._id]">{{ recipe.RecipeName}}</a></div>
+  </div>
+</div>
+</div>
+</div>
